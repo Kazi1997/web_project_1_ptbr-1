@@ -9,29 +9,33 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.header {
+.header{
   height: 100vh;
   min-height: 600px;
-  /*max-height: 756px; ou ele tem 100vh ou ele tem até 756px, se eu respeitar os 756px, o display absolute vai obedecer a altura dos 100vh e vai alinhar os blocos fora do plano de fundo cinza*/
+  max-height: 756px;
   background-color:  #F2F2F2;
+  overflow: hidden;
+  position: relative;
   display: flex;
-  /* parameters for the header section */
+  justify-content: left;
 }
 
 .logo{
+  width: 154px;
+  height: 31px;
+  z-index: 1;
+}
+
+.logo_place_header{
   position: absolute;
   top: 30px;
   left: 64px;
 }
 
-.logo_place_header{
-  width: 154px;
-  height: 31px;
-}
-
 .header__title{
   width: 730px;
   display: flex;
+  margin: auto 0;
   align-self: center;
   margin-left: 64px;
   line-height: 96px;
@@ -40,26 +44,32 @@
 }
 
 .header__subtitle{
+  position: absolute;
   width: 388px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  margin-bottom: 25px;
+  left: 64px;
+  bottom: 30px;
 }
 
-.header__subtitle, .header__link{
-  position: absolute;
-  bottom: 30px;
-  left: 64px;
+.header__link{
+  text-decoration: none;
+  color: #2F80ED;
 }
+
 
 .header__main-ilustration{
   position: absolute;
-  right: 0;
+  line-height: 0;
+  height: 608px;
+  width: 765px;
+  right: 64px;
   bottom: 0;
   z-index: 1;
 }
 
-/* here we have two examples of selectors in order to remind you how to set styles for elements */
 .header__square-pic {
   position: absolute;
   top: 64px;
@@ -69,16 +79,11 @@
   background-color: #2F80ED;
 }
 
-/* including elements with key-value modifiers */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
+/*Fim do Header*/
+/*Fim do Início description*/
 
 .description{
-  padding: 100px 0;
+  padding: 100px 0 70px 0; /*coloquei 70 porque estou somando com a margem mais a frente*/
   width: 80%;
   min-width: 784px;
   margin: 0 auto;
@@ -91,9 +96,6 @@
 
 .two-columns__brief{
   min-width: 175px;
-}
-
-.two-columns__brief__title{
   min-width: 160px;
   margin-right: 20%;
   line-height: 1.2;
@@ -102,20 +104,18 @@
   color: #2F80ED;
 }
 
-.two-columns__text{
+.two-columns__paragraph{
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-top: 15px;
   margin-bottom: 30px;
 }
 
-.two-columns__text__span-accent{
-  font-size: 24px;
-  font-weight: bold;
-}
+/*Fim description*/
+/*Fim do início digits*/
 
 .digits{
+  padding-top: 50px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@
   margin-bottom: 40px;
 }
 
-.digits__title{
+.section__title{
   max-width: 60%;
   margin-bottom: 20px;
   line-height: 1.15;
@@ -131,7 +131,7 @@
   font-weight: bold;
 }
 
-.digits__subtitle{
+.section__subtitle{
   max-width: 60%;
   margin-bottom: 60px;
   line-height: 34px;
@@ -139,39 +139,37 @@
   font-weight: normal;
 }
 
-.digits__table{
+.table{
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;
   justify-content: space-between;
 }
 
-.digits__table__container{
+.table__cell{
+  list-style-type: none;
   width: 250px;
   margin-bottom: 60px;
 }
 
-.digits__table-title{
-  margin-top: 0;
-  line-height: 1.15;
+.table__heading{
+  line-height: 1.15px;
   font-size: 24px;
   font-weight: bold;
 }
 
-.digits__table-text{
+.table__text{
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
-.digits__table__span{
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 20px;
-}
+
+/*Fim do digits*/
+/*Fim do heynman*/
 
 .feynman{
+  position: relative;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -195,7 +193,7 @@
   max-width: 775px;
 }
 
-.feynman__text{
+.feynman__subtitle{
   z-index: 1;
   line-height: 51px;
   font-size: 36px;
@@ -203,18 +201,23 @@
 }
 
 .feynman__link{
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 48px;
   text-decoration: none;
   color: #2F80ED;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-  position: absolute;
-  right:48px;
-  margin-top: 25%;
 }
 
+/*Fim do feynman*/
+/*Fim do kaufman*/
+
 .kaufman{
+  padding-top: 50px;/*É para dar os 90px*/
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,63 +225,68 @@
   background-color: #1F1F1F;
   margin: 0 auto;
   padding-bottom: 90px;
+  overflow: hidden;
 }
 
-.kaufman__title{
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: bold;
-  margin-top: 90px;
-  margin-bottom: 20px;
-  z-index: 1;
+.section__title_theme_dark{
+  width: 60%;
+  text-align: center;
 }
 
-.kaufman__subtitle{
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
+.section__subtitle_theme_dark{
+  margin-top: 0px;
 }
 
-.kaufman__table{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1100px;
+.table_theme_dark{
+  width: 1060px; /*totalizando da os 1100px*/
+  padding-top: 4px;/*estou colocando esses valores para somar e dar com os do exercício*/
 }
 
-.kaufman__table__container{
+.table__cell_theme_dark {
   width: 200px;
-  margin-top: 80px;
+  color: white;
+  margin-right: 0;
+  z-index: 1;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.table__heading_theme_dark{
   z-index: 1;
 }
 
-.kaufman__table__title{
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
+.table__heading_text_dark{
+  z-index: 1;
 }
 
-.kaufman__table__text{
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-.kaufman__pic{
+.kaufman__triangle{
+  width: 660px;
+  height: 636px;
   position: absolute;
-  z-index: 0;
   right: -124px;
+  top: 0;
 }
+
+/*Então, dessa vez eu segui a risca o que está no papel e o triangulo em questão não alinhou exatamente como na imagem*/
+
+/*Fim do kaufman*/
+/*Fim do footer*/
 
 .footer{
+  min-height: 350px;
+}
+
+.footer__columns{
+  padding: 60px auto 40px auto;
   color:white;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   background-color: #1F1F1F;
   min-height: 350px;
 }
 
-.footer__block{
+.footer__column_content_copyright{
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
@@ -287,21 +295,46 @@
   margin: 18px 0;
 }
 
-.footer__about__title{
-  margin-bottom: 20px;
+.footer__logo{
+  width: 183px;
+  height: 35px;
 }
 
-.footer__media__title{
-  margin-bottom: 20px;
+.footer__author{
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.footer__media__block{
+.footer__column-heading{
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__column-links{
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  margin-left: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column_content_social{
   display: flex;
   flex-direction: row;
   flex-wrap:nowrap;
 }
 
-.footer__media__icon{
+.footer__social-icon{
   width:16px;
   margin-right: 10px;
+}
+
+ul{
+  padding-inline-start: 0px;
 }
