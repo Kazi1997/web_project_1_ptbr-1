@@ -2,7 +2,7 @@
   min-width: 1100px;
   /* we don't know how to make mobile versions of websites yet, */
   /* so here we've set a minimum page width */
-  /*max-width: 1600px;*/
+  max-width: 1600px; /*no meu monitor fica muito quebrado*/
   /* here we've set a maximum page width */
   margin: 0 auto;
   /* this ensures that all content is centered on screens wider than 1600px */
@@ -35,7 +35,6 @@
 .header__title{
   width: 730px;
   display: flex;
-  margin: auto 0;
   align-self: center;
   margin-left: 64px;
   line-height: 96px;
@@ -49,16 +48,13 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  margin-bottom: 25px;
   left: 64px;
   bottom: 30px;
 }
 
 .header__link{
-  display: block;
   text-decoration: none;
   color: #2F80ED;
-
 }
 
 
@@ -85,21 +81,24 @@
 /*Fim do Início description*/
 
 .description{
-  padding: 100px 0 70px 0; /*coloquei 70 porque estou somando com a margem mais a frente*/
-  width: 80%;
-  min-width: 784px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin: 0 auto;
+  padding: 100px 0 100px 0; 
 }
 
 .two-columns{
   display: flex;
   justify-content: space-between;
+  width: 80%;
+  min-width: 784px;
+  gap: 25%; /*não se especifica o quanto ele deseja*/
 }
 
 .two-columns__brief{
   min-width: 175px;
   min-width: 160px;
-  margin-right: 20%;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -110,15 +109,12 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-bottom: 30px;
 }
 
 /*Fim description*/
 /*Fim do início digits*/
 
 .digits{
-  padding-top: 50px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,6 +123,7 @@
 
 .section__title{
   max-width: 60%;
+  margin-top: 0;
   margin-bottom: 20px;
   line-height: 1.15;
   font-size: 60px;
@@ -134,6 +131,7 @@
 }
 
 .section__subtitle{
+  margin-top: 0;
   max-width: 60%;
   margin-bottom: 60px;
   line-height: 34px;
@@ -142,6 +140,8 @@
 }
 
 .table{
+  margin: 0;
+  row-gap: 80px;
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;
@@ -151,10 +151,10 @@
 .table__cell{
   list-style-type: none;
   width: 250px;
-  margin-bottom: 60px;
 }
 
 .table__heading{
+  margin: 0;
   line-height: 1.15px;
   font-size: 24px;
   font-weight: bold;
@@ -164,6 +164,8 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 25px;
 }
 
 
@@ -178,8 +180,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  width: 100%;
   height: 790px;
   background-color: #F2F2F2;
 }
@@ -200,6 +200,8 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .feynman__link{
@@ -217,47 +219,51 @@
 /*Fim do kaufman*/
 
 .kaufman{
-  padding-top: 50px;/*É para dar os 90px*/
+  padding-top: 90px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
   background-color: #1F1F1F;
-  margin: 0 auto;
   padding-bottom: 90px;
 }
 
 .section__title_theme_dark{
-  width: 60%;
+  color: white;
   text-align: center;
 }
 
 .section__subtitle_theme_dark{
-  margin-top: 0px;
+  color: white;
 }
 
 .table_theme_dark{
-  width: 1060px; /*totalizando da os 1100px*/
-  padding-top: 4px;/*estou colocando esses valores para somar e dar com os do exercício*/
+  color: white;
 }
 
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
   margin-right: 0;
   z-index: 1;
-  height: auto;
   margin-bottom: 20px;
+  /*todas são diferentes ou não tem na table__cell*/
 }
 
 .table__heading_theme_dark{
+  color: white; /*eu já havia colocado color no pai*/
   z-index: 1;
 }
 
-.table__heading_text_dark{
+.table__text_dark{
+  color: white; /*eu já havia colocado color no pai*/
   z-index: 1;
+  /*as propriedades que o brief pede são as mesma da .table__heading
+  margin: 0;
+  line-height: 1.15px;
+  font-size: 24px;
+  font-weight: bold;
+  */
 }
 
 .kaufman__triangle{
@@ -268,32 +274,27 @@
   top: 0;
 }
 
-/*Então, dessa vez eu segui a risca o que está no papel e o triangulo em questão não alinhou exatamente como na imagem*/
-
 /*Fim do kaufman*/
-/*Fim do footer*/
 
 .footer{
+  background-color:#1F1F1F;
+  display: flex;
+  justify-content: space-evenly;
   min-height: 350px;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
 }
 
 .footer__columns{
-  padding: 60px auto 40px auto;
-  color:white;
+  width: 90%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #1F1F1F;
-  min-height: 350px;
+  justify-content: space-between;
 }
 
 .footer__column_content_copyright{
   flex-basis: 711px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  max-height: 250px;
-  margin: 18px 0;
+
 }
 
 .footer__logo{
@@ -302,6 +303,7 @@
 }
 
 .footer__author{
+  color: white;
   margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
@@ -309,10 +311,16 @@
 }
 
 .footer__column-heading{
+  color: white;
   margin-bottom: 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
+}
+
+.footer__list{
+  list-style-type: none;
+  padding-inline-start: 0px;
 }
 
 .footer__column-links{
@@ -336,6 +344,16 @@
   margin-right: 10px;
 }
 
-ul{
-  padding-inline-start: 0px;
+.footer__column_content_about {
+  color: white;
 }
+
+.footer__column{
+  width:400px;
+  display: block;
+  margin: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+
