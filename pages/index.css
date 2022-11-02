@@ -4,13 +4,11 @@
 /* PAGE */
 @import url(../blocks/page/page.css);
 
-/* TITLE */
-@import url(../blocks/section-title/section__title.css);
-@import url(../blocks/section-title/theme/section__title_theme_dark.css);
-
-/* SUBTITLE */
-@import url(../blocks/section-subtitle/section__subtitle.css);
-@import url(../blocks/section-subtitle/theme/section__subtitle_theme_dark.css);
+/* SECTION */
+@import url(../blocks/section/__subtitle/section__subtitle.css);
+@import url(../blocks/section/__subtitle/theme/section__subtitle_theme_dark.css);
+@import url(../blocks/section/__title/section__title.css);
+@import url(../blocks/section/__title/theme/section__title_theme_dark.css);
 
 /* HEADER */
 @import url(../blocks/header/header.css);
@@ -66,6 +64,7 @@
 @import url(../blocks/two-columns/__brief/two-columns__brief.css);
 @import url(../blocks/two-columns/__main-text/two-columns__main-text.css);
 @import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
+@import url(../blocks/two-columns/__text/__span-accent/two-columns__text__span-accent.css);
 
 /* TECHNIQUES */
 @import url(../blocks/techniques/techniques.css);
