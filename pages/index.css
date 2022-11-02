@@ -4,11 +4,13 @@
 /* PAGE */
 @import url(../blocks/page/page.css);
 
-/* SECTION */
-@import url(../blocks/section/__subtitle/section__subtitle.css);
-@import url(../blocks/section/__subtitle/theme/section__subtitle_theme_dark.css);
-@import url(../blocks/section/__title/section__title.css);
-@import url(../blocks/section/__title/theme/section__title_theme_dark.css);
+/* SECTION-TITLE */
+@import url(../blocks/section-title/section-title.css);
+@import url(../blocks/section-title/theme/section-title_theme_dark.css);
+
+/* SECTION-SUBTITLE */
+@import url(../blocks/section-subtitle/section-subtitle.css);
+@import url(../blocks/section-subtitle/theme/section-subtitle_theme_dark.css);
 
 /* HEADER */
 @import url(../blocks/header/header.css);
