@@ -6,3 +6,7 @@ Esse projeto não apresenta responsividade, é só uma forma de desmonstrar dife
 **Link da Página**
 
 https://izaqueisrael.github.io/web_project_1_ptbr/
+
+**Tecnologias Usadas**
+
+HTML para o corpo e CSS para a estilização
